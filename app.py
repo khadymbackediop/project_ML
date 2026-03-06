@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 import joblib
 import numpy as np
+import os
+
 
 app = Flask(__name__)
 
@@ -34,4 +36,4 @@ def home():
     return render_template('index.html', columns=columns, prediction_text=prediction_text, predicted=predicted)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
